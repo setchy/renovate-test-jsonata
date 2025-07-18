@@ -8,8 +8,8 @@
     {
       "description": "Limit TypeScript updates for Angular related projects",
       "matchPackageNames": ["typescript", "tslib"],
-      "matchJsonata": ["*[depName = '@angular/core']"],
-      "groupName": "skipped libraries",
+      "matchJsonata": ["$exists(deps[depName = '@angular/core'])"],
+      "matchUpdateTypes": ["major"],
       "enabled": false
     }
   ]
