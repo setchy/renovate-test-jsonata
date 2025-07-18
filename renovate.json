@@ -7,9 +7,7 @@
   "packageRules": [
     {
       "description": "Limit TypeScript updates for Angular related projects",
-      "matchPackageNames": ["typescript", "tslib"],
-      "matchJsonata": ["$exists(deps[depName = '@angular/core'])"],
-      "matchUpdateTypes": ["major"],
+      "matchJsonata": ["$exists(deps[depName = '@angular/core']) and depName = 'typescript' and depType = 'major'"],
       "enabled": false
     }
   ]
