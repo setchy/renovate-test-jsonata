@@ -2,5 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Limit TypeScript updates for Angular related projects",
+      "matchPackageNames": ["typescript", "tslib"],
+      "matchJsonata": ["depName = '@angular/core'"],
+      "enabled": false
+    }
   ]
 }
