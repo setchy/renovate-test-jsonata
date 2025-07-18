@@ -8,7 +8,6 @@
     {
       "description": "Limit TypeScript updates for Angular related projects",
       "matchJsonata": ["$exists(deps[depName = '@angular/core']) and depName = 'typescript' and updateType = 'major'"],
-      "groupName": "debugging",
       "enabled": false
     }
   ]
